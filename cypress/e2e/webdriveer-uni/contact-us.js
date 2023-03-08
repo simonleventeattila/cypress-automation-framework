@@ -3,7 +3,7 @@
 describe("Test Contact us form via Webdriveruni", ()=>{
     it("Should be able to submit a successful submission via contact us form",()=>{
         //code
-        cy.visit("http://www.webdriveruniversity.com/Contact-Us/contactus.html");
+        cy.visit("/Contact-Us/contactus.html", );
         cy.get('[name="first_name"]').type("Theodora");
         cy.get('[name="last_name"]').type("Mathe");
         cy.get('[name="email"]').type("teodora@gmail.com");
