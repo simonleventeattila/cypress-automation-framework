@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-describe("Test Contact us form via Automation Test store", ()=>{
+describe("Login and complete step 1", ()=>{
     it("Should be able to submit a successful submission via contact us form",()=>{
        //code
         cy.visit("https://automationteststore.com/", );
