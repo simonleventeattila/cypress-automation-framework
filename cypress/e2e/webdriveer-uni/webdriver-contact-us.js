@@ -1,9 +1,12 @@
 /// <reference types="Cypress" />
 
 describe("Test Contact us form via Web-driver-uni", ()=>{
-    it("Should be able to submit a successful submission via contact us form",()=>{
+    it.only("Should be able to submit a successful submission via contact us form",()=>{
         //code
         cy.visit("http://www.webdriveruniversity.com/Contact-Us/contactus.html", );
+        cy.document().should('have.a.property', 'charset').and('eq', 'UTF-8');
+        cy.title().should('include','WebDriver | Contact Us');
+        cy.url().should('include','contactus.html');
         cy.get('[name="first_name"]').type("Theodora");
         cy.get('[name="last_name"]').type("Mathe");
         cy.get('[name="email"]').type("teodora@gmail.com");
@@ -13,7 +16,7 @@ describe("Test Contact us form via Web-driver-uni", ()=>{
 
     });
 
-    it.only("Should not be able to submit a successful submission via contact us form as all fields are required",()=>{
+    it("Should not be able to submit a successful submission via contact us form as all fields are required",()=>{
  
     cy.visit("http://www.webdriveruniversity.com/Contact-Us/contactus.html");
     cy.get('[name="first_name"]').type("Theodora");
