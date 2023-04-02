@@ -20,6 +20,7 @@ describe("Test Contact us form via Web-driver-uni", ()=>{
     cy.get('[name="last_name"]').type("Mathe");
     cy.get('textarea.feedback-input').type("How can I learn Cypres?")
     cy.get('[type="submit"]').click();
+    cy.get('body').contains("Error: all fields are requi");
     });
 });
 
