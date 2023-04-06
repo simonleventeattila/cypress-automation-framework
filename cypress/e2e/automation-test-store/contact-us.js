@@ -20,11 +20,11 @@ describe("Test Contact us form via Automation Test store", ()=>{
       cy.log("Test has completed");
     });
 
-    // it("Should fail to submit a successful submission via contact us form due to incompleteness",()=>{
-    //   cy.visit("https://automationteststore.com/", );
-    //   cy.get('a[href="https://automationteststore.com/index.php?rt=content/contact"]').click();
+    it("Should fail to submit a successful submission via contact us form due to incompleteness",()=>{
+      cy.visit("https://automationteststore.com/", );
+      cy.get('a[href="https://automationteststore.com/index.php?rt=content/contact"]').click();
          
-    //   cy.get('.col-md-6 > .btn').click();
-    //  });
+      cy.get('.col-md-6 > .btn').click();
+     });
 
 })
